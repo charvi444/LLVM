@@ -1,0 +1,15 @@
+digraph "CFG for 'choose' function" {
+	label="CFG for 'choose' function";
+
+	Node0x5555b9a1fce0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  store i32 %0, ptr %3, align 4\l  %4 = load i32, ptr %3, align 4\l  switch i32 %4, label %7 [\l    i32 1, label %5\l    i32 2, label %6\l  ]\l|{<s0>def|<s1>1|<s2>2}}"];
+	Node0x5555b9a1fce0:s0 -> Node0x5555b9a1fbe0[tooltip="1 -> 7\nProbability 33.33%" ];
+	Node0x5555b9a1fce0:s1 -> Node0x5555b9a219c0[tooltip="1 -> 5\nProbability 33.33%" ];
+	Node0x5555b9a1fce0:s2 -> Node0x5555b9a22090[tooltip="1 -> 6\nProbability 33.33%" ];
+	Node0x5555b9a219c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{5:\l|  store i32 100, ptr %2, align 4\l  br label %8\l}"];
+	Node0x5555b9a219c0 -> Node0x5555b9a222c0[tooltip="5 -> 8\nProbability 100.00%" ];
+	Node0x5555b9a22090 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{6:\l|  store i32 200, ptr %2, align 4\l  br label %8\l}"];
+	Node0x5555b9a22090 -> Node0x5555b9a222c0[tooltip="6 -> 8\nProbability 100.00%" ];
+	Node0x5555b9a1fbe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{7:\l|  store i32 -1, ptr %2, align 4\l  br label %8\l}"];
+	Node0x5555b9a1fbe0 -> Node0x5555b9a222c0[tooltip="7 -> 8\nProbability 100.00%" ];
+	Node0x5555b9a222c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{8:\l|  %9 = load i32, ptr %2, align 4\l  ret i32 %9\l}"];
+}
